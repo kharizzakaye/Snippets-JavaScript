@@ -1,0 +1,29 @@
+// Code for adding single new Date Range
+if (existingDateRanges.length > 1)
+{
+  for (var i = 0; i < existingDateRanges.length; i++)
+  {
+    if ( new Date(newStartDateTime) <= new Date(existingDateRanges[i].endDateTime)
+      && new Date(newEndDateTime) >= new Date(existingDateRanges[i].startDateTime)
+      {
+        // Write your condition here
+      }
+  }
+}
+
+
+// Code for adding multiple new Date Ranges
+if (existingDateRanges.length > 1)
+{
+  for (var i = 0; i < existingDateRanges.length; i++)
+  {
+    for (var j = 0; j < newDateRangeList.length; j++)
+    {
+      if ( new Date(newStartDateTime) <= new Date(existingDateRanges[i].endDateTime)
+        && new Date(newEndDateTime) >= new Date(existingDateRanges[i].startDateTime)
+        {
+          // Write your condition here
+        }
+    }
+  }
+}

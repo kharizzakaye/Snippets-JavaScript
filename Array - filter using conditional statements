@@ -1,0 +1,3 @@
+const filterArray = myArray.filter((item: any) => {
+  return item.name == "Bob" && item.age == 24;
+});

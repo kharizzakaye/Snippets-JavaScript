@@ -1,0 +1,11 @@
+function copyText() {
+    var text = document.getElementById("whatToCopy").innerText;
+    var elem = document.createElement("textarea");
+    document.body.appendChild(elem);
+    elem.value = text;
+    elem.select();
+    document.execCommand("copy");
+    document.body.removeChild(elem);
+
+    document.getElementById("copiedMessage").style.visibility = "visible";
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>This is paragraph number 1</p>
+    </div>
+
+    <button id="add">Add</button>
+    <button id="del">Remove</button>
+
+    <script>
+        var myDiv = document.querySelector("div");
+        var btnAdd = document.getElementById("add");
+        var btnDel = document.getElementById("del");
+        var para = document.querySelectorAll("p");
+        var nums = 1;
+
+        btnAdd.addEventListener("click", function(){
+            nums++;
+            var newPara = document.createElement("p");
+            var newParaTxt = document.createTextNode(`This is paragraph number ${nums}`);
+            newPara.appendChild(newParaTxt);
+            myDiv.appendChild(newPara);
+        });
+
+        btnDel.addEventListener("click", function(){
+            if(nums > 1)
+            {
+                nums--;
+                myDiv.removeChild(myDiv.lastChild);
+            }
+            else
+            {
+                alert("Dont delete!")
+            }
+        });
+    </script>
+</body>
+</html>
